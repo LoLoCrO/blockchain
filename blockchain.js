@@ -53,10 +53,7 @@ class Blockchain {
             const previousBlock = blockchain.chain[i - 1];
 
             if (currentBlock.hash !== currentBlock.getHash() || currentBlock.previousHash !== previousBlock.hash) {
-                console.log('Invalid blockchain');
-                console.log(currentBlock.hash !== currentBlock.getHash(), currentBlock.hash, currentBlock.getHash());
-                console.log(currentBlock.previousHash !== previousBlock.hash, currentBlock.previousHash, previousBlock.hash);
-                return false;
+               return false;
             }
         }
 
